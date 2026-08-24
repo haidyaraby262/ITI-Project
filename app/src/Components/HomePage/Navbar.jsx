@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <>
-    <div className="top-bar">
-        <p>🚚 Free Shipping on orders over $50 | Use code <span>SAVE10</span> for 10% off</p>
-    </div>
+
     <nav className='navbar'>
         <div className="logo">
           <img src={Logo} alt="ShopMate Logo" className="logo-img"/>
