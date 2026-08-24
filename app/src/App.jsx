@@ -5,7 +5,11 @@ import CartPage from "./Components/Cartpage/Cart";
 import ProductPage from "./Components/Product page/Product";
 import Payment from "./Components/Payment/Payment";
 import Navbar from './Components/HomePage/Navbar'; 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
+
 
 
   return (

@@ -1,0 +1,59 @@
+.quote-mark {
+    font-size: 32px;
+    color: #4b622c;
+    line-height: 1;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #63718a;
+    margin-bottom: 24px;
+}
+
+.stars {
+    color: #f59e0b;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+
+.custom-carousel-wrapper {
+    position: relative;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    color: #111827;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}
+
+.arrow-btn:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
