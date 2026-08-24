@@ -26,7 +26,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
+
         <div className="footer-col">
           <h5 className="footer-title">QUICK LINKS</h5>
           <ul className="footer-links">
@@ -38,7 +38,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Newsletter */}
+
         <div className="footer-col newsletter-col">
           <h5 className="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
           <p className="newsletter-desc">
@@ -55,7 +55,7 @@ function Footer() {
         </div>
       </div>
 
-      {/* Footer Bottom */}
+  
       <div className="footer-bottom">
         <p className="copyright">© 2026 ShopMate. All rights reserved.</p>
         <div className="legal-links">
