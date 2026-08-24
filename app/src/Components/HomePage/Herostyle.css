@@ -1,22 +1,23 @@
-*{
-  padding: 0px;
-  margin: 0px;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+
 .hero-section {
   background: linear-gradient(135deg, #f5f7ed 0%, #e6eee0 100%);
-  padding: 60px 80px;
+  padding: 80px 8%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #333;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-
+  min-height: 85vh;
+  overflow: hidden;
 }
 
-
+/* Content Area */
 .hero-content {
   flex: 1;
   max-width: 550px;
@@ -34,6 +35,7 @@
   font-weight: 700;
   font-size: 11px;
   margin-bottom: 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
 }
 
 .badge-dot {
@@ -44,9 +46,10 @@
 }
 
 .hero-title {
-  font-size: 52px;
+  font-size: clamp(32px, 5vw, 56px);
   font-weight: 800;
   color: #1a1a1a;
+  line-height: 1.15;
   margin-bottom: 20px;
 }
 
@@ -56,7 +59,8 @@
 
 .hero-description {
   color: #666;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.6;
   margin-bottom: 32px;
 }
 
@@ -67,7 +71,7 @@
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 14px 28px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
@@ -83,12 +87,18 @@
 
 .btn-primary:hover {
   background-color: #2e3d22;
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: #ffffff;
   color: #1a1a1a;
   border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
 }
 
 .social-proof {
@@ -102,11 +112,12 @@
 }
 
 .avatar-group img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 2px solid #fff;
-  margin-left: -8px;
+  margin-left: -10px;
+  object-fit: cover;
 }
 
 .avatar-group img:first-child {
@@ -118,76 +129,79 @@
   color: #555;
 }
 
-/* القسم الأيمن - الصورة والدوائر */
+/* Image & Floating Cards Area */
 .hero-image-wrapper {
   flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 480px;
-  height: 480px;
+  max-width: 450px;
+  width: 100%;
 }
 
 .circle-bg {
-  width: 420px;
-  height: 420px;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-color: #d8e6c7;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .main-image {
-  width: 390px;
-  height: 390px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* البادجات العائمة */
+/* Floating Badges */
 .floating-badge {
   position: absolute;
   z-index: 10;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .discount-badge {
-  top: 30px;
-  right: 20px;
+  top: 20px;
+  right: 0px;
   background-color: #3f522f;
   color: #ffffff;
   padding: 12px 18px;
-  border-radius: 12px;
+  border-radius: 14px;
   text-align: center;
 }
 
 .discount-badge strong {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .discount-badge span {
   font-size: 11px;
+  opacity: 0.9;
 }
 
 .product-card {
-  bottom: 10px;
-  left: 0px;
+  bottom: 20px;
+  left: -20px;
   background-color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 12px;
+  padding: 10px 18px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  gap: 12px;
   white-space: nowrap;
 }
 
 .product-info h4 {
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: #1a1a1a;
 }
@@ -195,5 +209,53 @@
 .product-info p {
   margin: 2px 0 0;
   font-size: 11px;
-  color: #777;
+  color: #666;
+}
+
+/* Media Queries (Responsive) */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 24px;
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    max-width: 360px;
+  }
+  
+  .product-card {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .discount-badge {
+    right: -10px;
+  }
+
+  .product-card {
+    left: -10px;
+  }
 }
