@@ -3,8 +3,22 @@ import Facebook from '../../assets/facebook.svg'
 import Youtube from '../../assets/youtube.svg'
 import Twitter from '../../assets/twitter.svg'
 import './Footer.css' 
+import { useState } from 'react';
 
 function Footer() {
+  const[email,setEmail]=useState("");
+  const[subscribed,setSubscribed]=useState(false)
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    if(email){
+      setSubscribed(true);
+      setEmail("")
+      setTimeout(()=>{
+        setSubscribed(false)
+      },2000)
+    }
+  }
   return (
     <footer className="site-footer">
 
@@ -44,14 +58,21 @@ function Footer() {
           <p className="newsletter-desc">
             Get the latest updates on new products and upcoming sales.
           </p>
-          <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="newsletter-form" onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <button type="submit" className="btn-subscribe">Subscribe</button>
           </form>
+          {subscribed && (
+        <p className="subscribe-success">
+          Thank you for subscribing! 🎉
+        </p>
+      )}
         </div>
       </div>
 

@@ -8,12 +8,23 @@ import Footer from './Footer'
 function HomePage() {
   return (
     <>
-      <Navbar/>
+    <Navbar/>
+
+    <section id="home">
       <Hero />
+    </section>
+
       <Bestproduct />
+
       <Offer />
-      <Customersay />
-      <Footer />
+
+      <section id="customersays">
+        <Customersay />
+      </section>
+      
+      <footer id="footer">
+        <Footer />
+      </footer>
     </>
   )
 }

@@ -141,7 +141,12 @@
 .legal-links a:hover {
   color: brown;
 }
-
+.subscribe-success {
+  color: #3b4d28;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  font-weight: 500;
+}
 
 @media (max-width: 768px) {
   .footer-container {

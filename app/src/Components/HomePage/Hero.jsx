@@ -1,5 +1,6 @@
 import Herophoto from '../../assets/hero section.jpeg';
 import './Herostyle.css';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -20,8 +21,12 @@ function Hero() {
         </p>
 
         <div className="hero-actions">
-          <button className="btn btn-primary">Shop Now &rarr;</button>
-          <button className="btn btn-secondary">Explore Deals</button>
+          <Link to="/product" className="btn btn-primary">
+                  Shop Now &rarr;
+          </Link>
+          <a href="#customersays" className="btn btn-secondary">
+                Explore Deals
+          </a>
         </div>
 
         <div className="social-proof">

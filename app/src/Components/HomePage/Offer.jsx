@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import "./Offer.css"
 import offerImg from "../../assets/product offer.jpeg";
 
@@ -16,9 +16,10 @@ function Offer() {
           Limited time offer on selected items.
           Hurry up and grab the best deals!
         </p>
-        <button className="offer-btn">
-          Shop the Sale →
-        </button>
+
+        <Link to="/product"  className='offer-btn'>
+        Shop the Sale →
+        </Link>
       </div>
 
       <div className="offer-image">

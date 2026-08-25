@@ -20,11 +20,15 @@ function Navbar() {
 
         
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <li className="active"><a href="#home" onClick={closeMenu}>Home</a></li>
-            <li><a href="#shop" onClick={closeMenu}>Shop</a></li>
-            <li><a href="#categories" onClick={closeMenu}>Categories</a></li>
-            <li><a href="#deals" onClick={closeMenu}>Deals</a></li>
-            <li><a href="#about" onClick={closeMenu}>About</a></li>
+            <li className="active"><a href="/" onClick={closeMenu}>Home</a></li>
+            <li>
+              <Link to="/best-product" onClick={closeMenu}>Shop</Link>
+            </li>
+            <li>
+              <Link to="/product" onClick={closeMenu}>Categories</Link>
+          </li>
+            <li><a href="#customersays"onClick={closeMenu}>Deals</a></li>
+            <li><a href="#footer"onClick={closeMenu}>About</a></li>
           </ul>
 
         <div className="navbar-right">
