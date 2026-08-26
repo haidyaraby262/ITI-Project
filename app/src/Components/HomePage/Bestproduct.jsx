@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Bestproduct.css';
+import { useCart } from '../Cartpage/CartContext';
 
 function Bestproduct() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [likedProducts, setLikedProducts] = useState([]);
+  const { addCart } = useCart();
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products?limit=5')
@@ -64,7 +66,9 @@ function Bestproduct() {
                 <span className="price">${product.price}</span>
               </div>
               
-              <button className="add-to-cart-btn">🛒 Add to Cart</button>
+              <button className="add-to-cart-btn"
+              onClick={() => addCart(product)}
+              >🛒 Add to Cart</button>
             </div>
           );
         })}

@@ -1,0 +1,284 @@
+
+.cart-v2-page {
+  background-color: #f7f6f0 !important;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  direction: ltr; 
+}
+
+.cart-v2-page * {
+  box-sizing: border-box;
+}
+
+.cart-v2-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+
+
+.cart-v2-subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.cart-v2-empty {
+  background: #fff;
+  padding: 50px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.cart-v2-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.cart-v2-items-list {
+  flex: 1 1 620px;
+}
+
+.cart-v2-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.cart-v2-product-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 220px;
+  max-width: 280px;
+}
+
+.cart-v2-img-box {
+  background-color: #eaeaea;
+  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cart-v2-img-box img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.cart-v2-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cart-v2-item-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-v2-item-cat {
+  font-size: 12px;
+  color: #888;
+}
+
+
+.cart-v2-counter {
+  background-color: #f2efe6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cart-v2-counter button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.cart-v2-counter span {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+}
+
+
+.cart-v2-price-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.cart-v2-price {
+  font-weight: 800;
+  font-size: 16px;
+  color: #000;
+  min-width: 65px;
+  text-align: right;
+}
+
+.cart-v2-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.cart-v2-icon {
+  cursor: pointer;
+}
+
+.cart-v2-icon:hover {
+  color: #333;
+}
+
+.cart-v2-back-btn {
+  display: inline-block;
+  background: #eee9d9;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+
+.cart-v2-summary-wrapper {
+  flex: 1 1 320px;
+}
+
+.cart-v2-summary-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.cart-v2-summary-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  color: #000;
+}
+
+.cart-v2-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 13px;
+}
+
+.cart-v2-val-dark {
+  color: #000;
+  font-weight: 700;
+}
+
+.cart-v2-val-green {
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.cart-v2-divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 16px 0;
+}
+
+.cart-v2-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000;
+  font-weight: 800;
+}
+
+.cart-v2-total-price {
+  font-size: 20px;
+}
+
+.cart-v2-promo-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cart-v2-promo-box input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  outline: none;
+  font-size: 13px;
+}
+
+.cart-v2-apply-btn {
+  background-color: #4a5d3e;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.cart-v2-checkout-btn {
+  width: 100%;
+  background-color: #4a5d3e;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.cart-v2-badges {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cart-v2-badge {
+  background: #f4f4f4;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #444;
+}

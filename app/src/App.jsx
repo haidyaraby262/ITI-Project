@@ -6,6 +6,7 @@ import ProductPage from "./Components/Product page/Product";
 import Payment from "./Components/Payment/Payment";
 import Navbar from './Components/HomePage/Navbar'; 
 import Bestproduct from './Components/HomePage/Bestproduct'
+import { CartProvider } from './Components/Cartpage/CartContext'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+    <CartProvider>
      <BrowserRouter>
       <Navbar />
       <Routes>
@@ -26,6 +28,7 @@ function App() {
       </Routes>
       
     </BrowserRouter>
+    </CartProvider>
      
     </>
   )

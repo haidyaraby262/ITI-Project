@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import './productpage.css'
+import { useCart } from '../Cartpage/CartContext';
 function Product() {
   const[allproduct,setAllproduct]=useState([])
+  const { addCart } = useCart();
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
@@ -20,7 +22,12 @@ function Product() {
             <div className="product-details">
               <h3 className="product-title">{product.title}</h3>
               <span className="price">${product.price}</span>
-              <button className="add-to-cart-btn">🛒 Add to Cart</button>
+              <button className="add-to-cart-btn"
+              onClick={()=>{
+                addCart(product)
+
+              }}
+              >🛒 Add to Cart</button>
             </div>
           </div>
         ))}
