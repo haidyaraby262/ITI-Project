@@ -1,5 +1,9 @@
 import { useCart } from './CartContext';
 import { Link } from 'react-router-dom';
+
+import { useNavigate } from "react-router-dom";
+
+
 import './Cart.css';
 
 function Cart() {
@@ -9,6 +13,9 @@ function Cart() {
   const orderTotal = cartItem.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const discount = orderTotal > 0 ? 25.00 : 0;
   const finalTotal = orderTotal > 0 ? orderTotal - discount : 0;
+
+  const navigate = useNavigate();
+
 
   return (
     <div className="cart-v2-page">
@@ -100,7 +107,7 @@ function Cart() {
                   <button className="cart-v2-apply-btn">Apply</button>
                 </div>
 
-                <button className="cart-v2-checkout-btn">
+                  <button className="cart-v2-checkout-btn" onClick={() => navigate("/payment")}>
                   Proceed to Checkout →
                 </button>
 
