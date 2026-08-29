@@ -3,15 +3,16 @@ import HomePage from './Components/HomePage/Index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartPage from "./Components/Cartpage/Cart";
 import ProductPage from "./Components/Product page/Product";
-import Payment from "./Components/Payment/Payment";
+// import Payment from "./Components/Payment/Payment";
 import Navbar from './Components/HomePage/Navbar';
 import Bestproduct from './Components/HomePage/Bestproduct'
 import { CartProvider } from './Components/Cartpage/CartContext'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import CheckoutFlow from "./Components/Payment/CheckoutFlow";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

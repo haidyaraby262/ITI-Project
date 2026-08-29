@@ -39,7 +39,7 @@ function OrderSummary({ discountCode, setDiscountCode }) {
                 <span>${finalTotal.toFixed(2)}</span>
             </div>
 
-            <div className="summary-divider" />
+            {/* <div className="summary-divider" /> */}
 
             {/* <label className="discount-label">+ Discount code?</label>
             <div className="discount-row">
