@@ -7,8 +7,11 @@ function Cart() {
 
   const totalProductsCount = cartItem.reduce((acc, item) => acc + item.quantity, 0);
   const orderTotal = cartItem.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const discount = orderTotal > 0 ? 25.00 : 0;
-  const finalTotal = orderTotal > 0 ? orderTotal - discount : 0;
+  
+  // حساب الخصم بنسبة 10%
+  const discountRate = 0.10;
+  const discount = orderTotal * discountRate;
+  const finalTotal = orderTotal - discount;
 
   return (
     <div className="cart-v2-page">
@@ -26,7 +29,6 @@ function Cart() {
         ) : (
           <div className="cart-v2-layout">
             
-
             <div className="cart-v2-items-list">
               {cartItem.map((item) => (
                 <div key={item.id} className="cart-v2-card">
@@ -62,7 +64,6 @@ function Cart() {
                 ← Continue Shopping
               </Link>
             </div>
-
 
             <div className="cart-v2-summary-wrapper">
               <div className="cart-v2-summary-card">
