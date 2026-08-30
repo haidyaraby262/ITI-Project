@@ -10,6 +10,7 @@ function Bestproduct() {
   const { addCart } = useCart();
 
   useEffect(() => {
+    
     fetch('https://fakestoreapi.com/products?limit=5')
       .then((res) => res.json())
       .then((data) => {

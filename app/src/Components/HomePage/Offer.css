@@ -73,6 +73,9 @@
     cursor: pointer;
 }
 
+.offer-btn:hover{
+    background-color: #2f3818;
+}
 
 
 .offer-image {
@@ -129,7 +132,7 @@
 
 
 
-    /* TABLET */
+/* TABLET */
 
 
 @media (max-width: 900px) {
@@ -154,7 +157,7 @@
 
 
 
-    /* MOBILE */
+/* MOBILE */
 
 
 @media (max-width: 700px) {
@@ -198,7 +201,7 @@
 
 
 
-    /* SMALL MOBILE */
+/* SMALL MOBILE */
 
 
 @media (max-width: 450px) {
