@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./checkout.css";
 import { useCart } from "../Cartpage/CartContext";
 
@@ -38,22 +38,6 @@ function OrderSummary({ discountCode, setDiscountCode }) {
                 <span>Total</span>
                 <span>${finalTotal.toFixed(2)}</span>
             </div>
-
-            {/* <div className="summary-divider" /> */}
-
-            {/* <label className="discount-label">+ Discount code?</label>
-            <div className="discount-row">
-                <input
-                    type="text"
-                    placeholder="Enter code"
-                    value={discountCode}
-                    onChange={(e) => setDiscountCode(e.target.value)}
-                    className="discount-input"
-                />
-                <button type="button" className="btn-apply">
-                    Apply
-                </button>
-            </div> */}
         </div>
     );
 }

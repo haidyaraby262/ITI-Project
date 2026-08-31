@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ===== Variables ===== */
+
 :root {
-    /* --green: #3f4a20; */
     --green: #4b622c;
     --green-dark: #2f3818;
     --cream: #f2efe6;
@@ -14,11 +13,10 @@
     --green-success: #3f7a3f;
 }
 
-/* ===== Page ===== */
+
 .checkout-page {
     background: var(--cream);
     min-height: 100vh;
-    /* padding: 32px 16px; */
     padding: 100px 16px 32px;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--text-dark);

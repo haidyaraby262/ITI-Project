@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./checkout.css";
 
 function Field({ label, required, error, children }) {

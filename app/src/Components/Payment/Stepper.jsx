@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./checkout.css";
 
 function Stepper({ step }) {
@@ -10,7 +10,7 @@ function Stepper({ step }) {
                 <div className={`stepper-circle ${step >= 1 ? "active" : ""}`}>
                     {step > 1 ? "✓" : "1"}
                 </div>
-                <span className={`stepper-label ${step === 1 ? "active" : ""}`}>Delivery</span>
+                <span className={`stepper-label ${step === 1 ? "active" : ""}`}>Delivery</span> 
             </div>
 
             <div className="stepper-line" />
