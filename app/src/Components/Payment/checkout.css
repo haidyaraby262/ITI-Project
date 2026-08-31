@@ -354,6 +354,19 @@
     margin: 4px 0 0;
 }
 
+
+.order-success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream);
+    z-index: 999;
+}
 .discount-label {
     display: block;
     font-size: 12px;
@@ -402,4 +415,23 @@
 .order-success-text {
     font-size: 16px;
     color: #4b5563;
+}
+
+
+
+
+.empty-cart-warning {
+    font-size: 13px;
+    color: var(--red);
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+.btn-primary:disabled {
+    background: #c9c6b8;
+    cursor: not-allowed;
+}
+
+.btn-primary:disabled:hover {
+    background: #c9c6b8;
 }
