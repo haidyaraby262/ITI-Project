@@ -23,10 +23,14 @@ import OrderSummary from "./OrderSummary";
                     {step === 1 ? (
                         <DeliveryStep form={form} setForm={setForm} onContinue={() => setStep(2)} />
                     ) : (
-                        <PaymentStep form={form} setForm={setForm} onBack={() => setStep(1)} />
+                            <PaymentStep form={form} setForm={setForm} onBack={() => setStep(1)}
+                                onOrderComplete={() => setStep(3)} />
                     )}
 
-                    <OrderSummary discountCode={discountCode} setDiscountCode={setDiscountCode} />
+                    {step !== 3 && (
+                        <OrderSummary discountCode={discountCode} setDiscountCode={setDiscountCode} />
+                    )}
+
                 </div>
             </div>
         </div>

@@ -3,6 +3,9 @@ import "./checkout.css";
 import Field from "./Field";
 import { useCart } from "../Cartpage/CartContext";
 
+
+
+
 const CARD_NUMBER_PATTERN = /^\d{4}\s?\d{4}\s?\d{4}\s?\d{4}$/;
 
 const PAYMENT_METHODS = [
@@ -12,7 +15,7 @@ const PAYMENT_METHODS = [
     { id: "paypal", label: "PayPal", icon: "🅿" },
 ];
 
-function PaymentStep({ form, setForm, onBack }) {
+function PaymentStep({ form, setForm, onBack, onOrderComplete }) {
     const { cartItem } = useCart();
     const orderTotal = cartItem.reduce((acc, item) => acc + item.price * item.quantity, 0);
     const discount = orderTotal > 0 ? 25.00 : 0;
@@ -52,19 +55,27 @@ function PaymentStep({ form, setForm, onBack }) {
     }
 
     function handlePlaceOrder() {
+
+        if (finalTotal <= 0) {
+            return;
+        }
         if (validate()) {
             setOrderPlaced(true);
+           
+            onOrderComplete?.();
         }
     }
 
     if (orderPlaced) {
         return (
+            <div className="order-success-overlay">
             <div className="checkout-card">
                 <div className="order-success-box">
                     <h2 className="order-success-title">✅ Order Confirmed!</h2>
                     <p className="order-success-text">
                         Your order has been placed successfully. Thank you for shopping with us!
                     </p>
+                </div>
                 </div>
             </div>
         );
@@ -124,11 +135,18 @@ function PaymentStep({ form, setForm, onBack }) {
                 ))}
             </div>
 
+            {finalTotal <= 0 && (
+                <p className="empty-cart-warning">
+                    Your cart is empty. Please add items before placing an order.
+                </p>
+            )}
+
+
             <div className="payment-actions">
                 <button type="button" className="btn-back" onClick={onBack}>
                     ← Back
                 </button>
-                <button type="button" className="btn-primary" onClick={handlePlaceOrder}>
+                <button type="button" className="btn-primary" onClick={handlePlaceOrder} disabled={finalTotal <= 0}>
                     Place Order & Pay ${finalTotal.toFixed(2)}
                 </button>
             </div>

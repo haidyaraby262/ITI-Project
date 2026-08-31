@@ -3,6 +3,8 @@ import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
 
+
+
 export function CartProvider({ children }) {
   const [cartItem, setCartItem] = useState([]);
 
@@ -44,6 +46,9 @@ export function CartProvider({ children }) {
       item.id!=id
     ))
   };
+
+
+
 
   return (
     <CartContext.Provider value={{ cartItem, addCart, increase, decrease, setCartItem,remove

@@ -17,7 +17,7 @@ function Stepper({ step }) {
 
             <div className="stepper-item">
                 <div className={`stepper-circle ${step >= 2 ? "active" : ""}`}>
-                    2
+                    {step > 2 ? "✓" : "2"}
                 </div>
                 <span className={`stepper-label ${step === 2 ? "active" : ""}`}>Confirm & Pay</span>
             </div>
