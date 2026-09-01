@@ -1,10 +1,8 @@
 import { useCart } from './CartContext';
 import { Link } from 'react-router-dom';
-
 import { useNavigate } from "react-router-dom";
-
-
 import './Cart.css';
+
 
 function Cart() {
   const { cartItem, increase, decrease, remove } = useCart();
@@ -12,7 +10,6 @@ function Cart() {
   const totalProductsCount = cartItem.reduce((acc, item) => acc + item.quantity, 0);
   const orderTotal = cartItem.reduce((acc, item) => acc + item.price * item.quantity, 0);
   
-  // حساب الخصم بنسبة 10%
   const discountRate = 0.10;
   const discount = orderTotal * discountRate;
   const finalTotal = orderTotal - discount;

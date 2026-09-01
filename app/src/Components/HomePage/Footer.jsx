@@ -23,7 +23,6 @@ function Footer() {
     <footer className="site-footer">
 
       <div className="footer-container">
-        {/* Brand Section */}
         <div className="footer-col brand-col">
           <div className="footer-logo-wrapper">
             <img src={Logo} alt="ShopMate Logo" className="footerlogo" />
