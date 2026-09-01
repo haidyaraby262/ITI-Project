@@ -23,18 +23,3 @@ A modern, responsive E-Commerce web application built with **React.js**. The app
 * **Styling:** CSS3 / CSS Modules / Tailwind CSS *(عدليها حسب التقنية المستخدمة)*
 * **API Integration:** FakeStoreAPI / Custom API *(اختياري - احذفيها لو البيانات static)*
 
----
-
-## 📁 Project Structure
-
-```text
-src/
-├── components/      # Reusable UI components (Navbar, Footer, ProductCard, etc.)
-├── pages/           # Main page components
-│   ├── Home/
-│   ├── ProductDetails/
-│   ├── Cart/
-│   └── Checkout/
-├── context/         # Cart & Application State Management
-├── assets/          # Images, icons, and static media
-└── App.js           # Main Routing setup
